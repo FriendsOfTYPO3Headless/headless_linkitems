@@ -1,0 +1,34 @@
+{
+  "name": "friendsoftypo3headless/headless-linkitems",
+  "type": "typo3-cms-extension",
+  "description": "This extension provides integration with EXT:linkitems to output content from TYPO3 in JSON format.",
+  "keywords": [
+    "TYPO3",
+    "headless",
+    "pwa",
+    "json",
+    "linkitems"
+  ],
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "require": {
+    "typo3/cms-core": "^10.4 || ^11.5",
+    "friendsoftypo3headless/headless-bootstrap-package": "^0.1"
+  },
+  "suggest": {
+    "friendsoftypo3/headless": "^3.0",
+    "friendsoftypo3headless/linkitems": "^1.0"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "headless_linkitems"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "typo3/cms-composer-installers": true,
+      "typo3/class-alias-loader": true
+    }
+  }
+}

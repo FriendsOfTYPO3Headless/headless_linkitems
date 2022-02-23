@@ -1,0 +1,46 @@
+lib.contentElementWithHeader {
+  fields {
+    linkitems {
+      fields {
+        layout = TEXT
+        layout.field = linkitem_layout
+
+        align = TEXT
+        align.field = linkitem_align
+
+        items {
+          dataProcessing {
+            // todo: Change to FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor as soon as the new version is released.
+            // Then also remove the dependency to headless-bootstrap-package
+            10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\DatabaseQueryProcessor
+            10 {
+              table = tx_linkitems_domain_model_linkitem
+              where {
+                data = field:uid
+                intval = 1
+                wrap = tablename="tt_content" AND fieldname="linkitems" AND uid_foreign=|
+              }
+
+              orderBy = sorting
+              as = linkitems
+
+              overrideFields {
+                link = TEXT
+                link {
+                  htmlSpecialChars = 1
+                  typolink {
+                    parameter {
+                      field = link
+                    }
+
+                    returnLast = result
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
