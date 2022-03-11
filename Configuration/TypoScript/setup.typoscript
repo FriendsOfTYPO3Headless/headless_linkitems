@@ -10,9 +10,7 @@ lib.contentElementWithHeader {
 
         items {
           dataProcessing {
-            // todo: Change to FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor as soon as the new version is released.
-            // Then also remove the dependency to headless-bootstrap-package
-            10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\DatabaseQueryProcessor
+            10 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
             10 {
               table = tx_linkitems_domain_model_linkitem
               where {
