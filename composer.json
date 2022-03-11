@@ -14,10 +14,9 @@
   ],
   "require": {
     "typo3/cms-core": "^10.4 || ^11.5",
-    "friendsoftypo3headless/headless-bootstrap-package": "^0.2"
+    "friendsoftypo3/headless": "^3.0.3"
   },
   "suggest": {
-    "friendsoftypo3/headless": "^3.0",
     "friendsoftypo3headless/linkitems": "^1.0"
   },
   "extra": {
